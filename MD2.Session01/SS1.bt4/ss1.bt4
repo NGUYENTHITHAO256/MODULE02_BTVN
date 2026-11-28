@@ -1,0 +1,19 @@
+/
+2 thực thế:
+độc giả và sách
+
+mối quan hệ giữa 2 thực thể:
+1 độc giả có thể mượn nhiều sách
+1 cuốn sách có thể được nhiều độc giả mượn ở những mốc thời gian khác nhau
+----> mối quan hệ N-M
+
+vì là mối quan hệ N-M nên cần có 1 entity trung gian là phiếu mượn 
+1 độc giả có nhiều lần mượn thông qua nhiều phiếu mượn
+1 cuốn sách có thể xuất hiện ở nhiều phiếu mượn ở nhiều lần khác nhau
+----> độc giả và phiếu mượn là mqh 1-N
+      sách và phiếu mượn là mqh 1-N
+
+các thuộc tính của các thực thể
+độc giả: mã số độc giả, tên độc giả, email
+sách: mã số sách, tên sách
+phiếu mượn: mã số phiếu mượn, ngày mượn

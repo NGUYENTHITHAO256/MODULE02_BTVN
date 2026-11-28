@@ -1,0 +1,27 @@
+/
+các bước thiết kế cơ sở dữ liệu:
+
+xác định yêu cầu:
+hệ thống cần quản lý hoạt động bán hàngcho khách hàng với các yêu cầu sau:
+lưu trữ thông tin:
+khách hàng gồm mã khách hàng, tên, sdt
+sản phẩm gồm mã sản phẩm, tên sản phẩm và giá bán
+ghi nhận các lần mua hàng, mỗi lần mua có ngày mua và tổng tiền
+mỗi khách hàng có thể mua nhiều sản phẩm trong một lần, và mỗi sản phẩm có thể được nhiều khách hàng mua
+
+Xác định thực thể:
+khách hàng, sản phẩm, order
+
+Xác định quan hệ:
+khách hàng và sản phẩm là mối quan hệ N-M thông qua order
+mỗi khách hàng có nhiều lần mua hàng, nhưng mỗi lần mua chỉ thuộc về 1 khách hàng
+---> khách hàng và order là mqh 1-N
+
+mỗi sản phần có thể được xuất hiện trong nhièu lần mua 
+và một lần mua có thể có nhiều sản phẩm
+---> mqh N-M
+---> cần thêm 1 bảng orderdetail
+mỗi lần mua có thể có nhiều dòng order detail, nhưng mỗi orderdetail chỉ thuộc 1 order
+mỗi sản phẩm có thể xuất hiện ở nhiều order detail, nhưng mỗi dòng order detail chỉ chứa 1 sản phẩm
+---> order và orderdetail là mqh 1-N
+     sản phẩm và order detail là mqh 1-N

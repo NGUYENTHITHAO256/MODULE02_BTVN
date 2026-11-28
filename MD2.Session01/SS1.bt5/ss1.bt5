@@ -1,0 +1,17 @@
+//
+các thực thể: sinh viên, mỗi học, đăng ký 
+
+thuộc tính:
+sinh viên: mã sinh viên, tên sinh viên, ngày sinh, giới tính
+môn học: mã môn, tên môn học, số tín chỉ
+đăng ký: mã số đăng ký, học kỳ, ngày đăng ký
+
+mối quan hệ giữa các thực thể:
+mỗi sinh viên có thể đăng ký nhiều môn học
+một môn học được nhiêu sinh viên đăng ký
+---> mqh N-M
+---> cần 1 bảng trung gian là phiếu đăng ký
+mỗi sinh viên có thể có nhiều phiếu đăng ký
+mỗi môn học có thể xuất hiện ở nhiều phiếu đăng ký
+---> sinh viên và phiếu đăng ký là mqh 1-N
+     môn học và phiếu đăng ký là mqh 1-N
